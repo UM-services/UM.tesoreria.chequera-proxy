@@ -1,10 +1,10 @@
-# Configuración de CORS
+# Configuración de CORS para DESARROLLO
 cors:
-  # Orígenes permitidos (separados por comas)
-  allowed-origins: http://localhost:4200,http://127.0.0.1:4200
+  # Orígenes permitidos en desarrollo
+  allowed-origins: http://localhost:4200,http://127.0.0.1:4200,http://localhost:3000,http://127.0.0.1:3000
   # Métodos HTTP permitidos
-  allowed-methods: GET,POST,PUT,DELETE,OPTIONS
-  # Headers permitidos
+  allowed-methods: GET,POST,PUT,DELETE,OPTIONS,PATCH
+  # Headers permitidos (más permisivo en desarrollo)
   allowed-headers: Content-Type,Authorization,X-Requested-With,Accept,Origin,Access-Control-Request-Method,Access-Control-Request-Headers
   # Headers expuestos
   exposed-headers: Access-Control-Allow-Origin,Access-Control-Allow-Credentials
@@ -13,13 +13,13 @@ cors:
   # Permitir credenciales
   allow-credentials: true
 
-# Configuración del servidor
+# Configuración del servidor para desarrollo
 server:
   port: 8121
   servlet:
     context-path: /
 
-# Configuración de logging
+# Configuración de logging para desarrollo
 logging:
   level:
     um.tesoreria.chequera.backend: DEBUG
