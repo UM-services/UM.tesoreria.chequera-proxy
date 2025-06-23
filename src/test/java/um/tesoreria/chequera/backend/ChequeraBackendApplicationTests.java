@@ -1,4 +1,4 @@
-package com.dqmdz.chequera.backend;
+package um.tesoreria.chequera.backend;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

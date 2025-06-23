@@ -1,0 +1,84 @@
+app:
+  port: ${APP_PORT:8121}
+  logging: debug
+
+server:
+  port: ${app.port}
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://eureka:@eureka-service:8761/eureka
+
+spring:
+  application:
+    name: tesoreria-chequera-backend
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: 
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.H2Dialect
+
+# Rate limiting configuration
+resilience4j:
+  ratelimiter:
+    instances:
+      auth-verify:
+        limit-for-period: 10
+        limit-refresh-period: 1m
+        timeout-duration: 1s
+
+logging:
+  level:
+    um.tesoreria.chequera.backend: ${app.logging}
+    web: ${app.logging}
+    org:
+      springframework:
+        cloud:
+          config: ${app.logging}
+        transaction:
+          interceptor: ${app.logging}
+        orm:
+          jpa: ${app.logging}
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - "*"
+          - prometheus
+          - health
+  endpoint:
+    prometheus:
+      access: unrestricted
+  metrics:
+    enabled: true
+    enable:
+      jdbc: true
+  httpexchanges:
+    recording:
+      enabled: true
+  prometheus:
+    metrics:
+      export:
+        enabled: true
+

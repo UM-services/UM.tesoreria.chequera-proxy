@@ -1,0 +1,26 @@
+# Configuración de CORS para PRODUCCIÓN
+cors:
+  # Orígenes permitidos en producción (CAMBIAR por tu dominio real)
+  allowed-origins: https://tu-dominio-produccion.com,https://www.tu-dominio-produccion.com
+  # Métodos HTTP permitidos
+  allowed-methods: GET,POST,PUT,DELETE,OPTIONS
+  # Headers permitidos (más restrictivo en producción)
+  allowed-headers: Content-Type,Authorization,X-Requested-With,Accept
+  # Headers expuestos
+  exposed-headers: Access-Control-Allow-Origin,Access-Control-Allow-Credentials
+  # Tiempo máximo de cache en segundos
+  max-age: 3600
+  # Permitir credenciales
+  allow-credentials: true
+
+# Configuración del servidor para producción
+server:
+  port: 8121
+  servlet:
+    context-path: /
+
+# Configuración de logging para producción
+logging:
+  level:
+    um.tesoreria.chequera.backend: INFO
+    org.springframework.web.cors: WARN 
