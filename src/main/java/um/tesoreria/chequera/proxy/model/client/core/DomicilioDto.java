@@ -1,0 +1,15 @@
+package um.tesoreria.chequera.proxy.model.client.core;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class DomicilioDto {
+
+    private String emailPersonal;
+    private String emailInstitucional;
+
+} 
