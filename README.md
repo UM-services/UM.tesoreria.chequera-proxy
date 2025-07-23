@@ -1,4 +1,4 @@
-# UM Tesoreria Chequera Backend
+# UM Tesoreria Chequera Proxy
 
 Este proyecto es el backend para la gestión y consulta del estado de chequeras de alumnos de la Universidad de Mendoza. Su objetivo es proveer los datos necesarios para que los usuarios, a través de un frontend, puedan consultar el estado de las chequeras asociadas a diferentes alumnos.
 
