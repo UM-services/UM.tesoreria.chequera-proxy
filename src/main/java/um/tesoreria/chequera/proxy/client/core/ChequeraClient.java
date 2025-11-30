@@ -7,7 +7,7 @@ import um.tesoreria.chequera.proxy.model.client.core.ChequeraDetailDto;
 
 import java.math.BigDecimal;
 
-@FeignClient(name = "tesoreria-core-service/api/tesoreria/core/chequera")
+@FeignClient(name = "tesoreria-core-service", contextId = "chequeraClient", path = "/api/tesoreria/core/chequera")
 public interface ChequeraClient {
 
     @GetMapping("/status/{personaId}/facultad/{facultadId}")
