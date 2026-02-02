@@ -6,18 +6,18 @@ Este proyecto es el backend para la gestión y consulta del estado de chequeras 
 - **Autenticación**: Endpoint para verificación de cuentas de usuario mediante Google Mail
 - **Gestión de Chequeras**: Consulta del estado de chequeras por persona y facultad
 - **Gestión de Usuarios**: Consulta de usuarios asociados a chequeras por facultad
-- **Arquitectura**: Basada en Spring Boot 3.5.0 con microservicios
-- **Service Discovery**: Integración con Eureka para descubrimiento de servicios
+- **Arquitectura**: Basada en Spring Boot 4.0.2 con microservicios
+- **Service Discovery**: Integración con Consul para descubrimiento de servicios
 - **Rate Limiting**: Protección contra abuso con Resilience4j
 - **Documentación API**: Swagger/OpenAPI integrado
 - **Monitoreo**: Actuator y métricas Prometheus habilitadas
 
 ## Tecnologías utilizadas
-- **Java**: 21
-- **Spring Boot**: 3.5.0
-- **Spring Cloud**: 2025.0.0
+- **Java**: 25
+- **Spring Boot**: 4.0.2
+- **Spring Cloud**: 2025.1.0
 - **Spring Cloud OpenFeign**: Para comunicación entre servicios
-- **Spring Cloud Netflix Eureka**: Service discovery
+- **Spring Cloud Consul**: Service discovery
 - **Resilience4j**: Circuit breaker y rate limiting
 - **Caffeine**: Cache en memoria
 - **Lombok**: Reducción de código boilerplate
