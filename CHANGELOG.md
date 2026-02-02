@@ -2,6 +2,15 @@
 
 Todas las modificaciones importantes de este proyecto se documentarán en este archivo.
 
+## [0.1.0] - 2026-02-02
+### Actualizado
+- Java: 21 → 25
+- Spring Boot: 3.5.8 → 4.0.2
+- Spring Cloud: 2025.0.0 → 2025.1.0
+- SpringDoc OpenAPI: 2.8.10 → 3.0.1
+- Commons Lang3: 3.18.0 → 3.20.0
+- Service Discovery: Eureka → Consul
+
 ## [0.0.1-SNAPSHOT] - 2025-06-19
 ### Agregado
 - Estructura inicial del proyecto Spring Boot 3.5.0
